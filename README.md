@@ -7,7 +7,7 @@ The database was a MariaDB instance provided by the university, likewise the web
 
 This project is primarily designed to teach students about good database design and implementation practices. 
 
-For a full brief on the project, its functionality, and details on its implementation, please see the summary.pdf file included in the repo. 
+For a full brief on the project, its functionality, and details on its implementation, please see the **summary.pdf** file included in the repo. 
 
 # Project Overview
 
