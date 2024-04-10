@@ -28,9 +28,10 @@ informaIon on repeat customers, we have a calculaIon a-ribute in the customers t
 how many separate Imes a customer has made a purchase. 
 
 # Database ERD
-![image](https://github.com/sfeng1/Database-Website/assets/114194642/40ba5f00-b2f8-4756-bfc1-4eecc23d86bd)
 
-Citations:
+![1](https://github.com/sfeng1/Database-Website/assets/114194642/cebf363b-3d92-4258-8bef-239582b4fdd7)
+
+# Citations:
 https://github.com/osu-cs340-ecampus/flask-starter-app
 08/03/2023
 flask-starter-app
