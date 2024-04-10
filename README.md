@@ -2,12 +2,14 @@
 
 # Summary
 
-This is a mock business website that interacts with the backend database to track marketing campaigns, inventory, transactions, and customers.
-The database was a MariaDB database provided by the university, likewise the website was hosted by the university web server. 
+This is a mock small business website that interacts with the backend database to track marketing campaigns, products, inventory, transactions, and customers.
+The database was a MariaDB instance provided by the university, likewise the website was hosted by the university web server. 
 
-Thie project is primarily designed to help students display and practice good database design and implementation practices. 
+This project is primarily designed to teach students about good database design and implementation practices. 
 
-# Project Outline
+For a full brief on the project, its functionality, and details on its implementation, please see the summary.pdf file included in the repo. 
+
+# Project Overview
 
 Whitney is a small business owner of The Bamboo Closet which sells Ie-dyed silk fans and other Ie-dyed
 products. Each month, she sells approximately 200 products. She also invests in social media adverIsing,
@@ -25,85 +27,8 @@ campaigns table and look for a correlaIon between the sale dates and the campaig
 informaIon on repeat customers, we have a calculaIon a-ribute in the customers table that calculates
 how many separate Imes a customer has made a purchase. 
 
-# Database Outline
-
-Database Outline
-Calculated fields are green and show up on the website via read funcIon, but aren’t in the database.
-• Customers: Records the details of each customer products are sold to.
-o Attributes:
-§ customerID: int, autoincrement, unique, not NULL, PK
-§ customerName: varchar, not NULL
-§ customerEmail: varchar
-§ totalRevenue (calculation based on sum of sales): decimal (19,2)
-§ salesCount (calculation based on count of sales for this customer): Int
-o Relationships:
-§ 1 to M with Sales: each customer can have multiple sales
-• Products: Table of all available products
-o Attributes:
-§ productID: int, autoincrement, unique, not NULL, PK
-§ productName: varchar, not NULL
-§ productPrice: Decimal (19,2), not NULL
-o Relationships:
-§ 1 to M with SaleItems: intersection table to facilitate M:M relationship with
-Sales table
-§ 1 to M with Inventory: each product can have multiple inventory entries to
-reflect inventory added on different days
-§ 1 to M with Campaigns: intersection table to facilitate M:M relationship with
-Channels table
-§ Channels: Influencers on social media that are paid to promote a product
-• Channels: Influencers on social media that are paid to promote a product
-o Attributes:
-§ channelID: int, autoincrement, unique, not NULL, PK
-§ channelName: varchar, not NULL
-§ channelEmail: varchar, not NULL
-§ rate: decimal (19,2), not NULL (this is a daily rate)
-o Relationships:
-§ 1 to M with Campaigns: intersection table to facilitate M:M relationship with
-Products table
-• Campaigns (intersection table):
-o Attributes:
-§ campaignID: int, autoincrement, unique, not NULL, PK
-§ channelID: int, FK
-§ startDate: date, not NULL
-§ endDate: date,
-§ productID: int, FK
-§ cost: decimal (19,2) (calculation based on channel.rate*length of campaign)
-o Relationships:
-§ M to 1 with Channels: each channel can run multiple campaigns
-§ M to 1 with Products: a product can have multiple influencer campaigns
-• Sales: list of all sales The Bamboo Closet has made
-o Attributes:
-§ saleID: int, autoincrement, unique, not NULL, PK
-§ customerID: int, FK
-§ saleDate: Date, not NULL
-§ totalSaleValue (calculation based on sum of lineItemCost from saleItem):
-decimal (19,2)
-o Relationships:
-§ M to 1 with Customers: each customer can have multiple sales
-§ 1 to M with SaleItems: intersection table to facilitate M:M relationship with
-products
-• SaleItems (intersection table): details of an individual sale
-o Attributes:
-§ saleItemID: int, autoincrement, unique, not NULL, PK
-§ saleID: int, FK
-§ productID: int, FK
-§ quantity: int, not NULL
-§ totalLineItemCost (calculation of productID.productPrice * saleQuantity):
-decimal (19,2)
-o Relationships:
-§ M to 1 with Products: a product can be associated with multiple SaleItems
-§ M to 1 with Sales: a sale can have multiple SalesItems
-• Inventory: list of products that are currently available for sale and their quantities
-o Attributes:
-§ inventoryID: int, autoincrement, unique, not NULL, PK
-§ productID: int, FK
-§ dateAdded: date, not NULL
-§ quantity: int, not NULL
-§ totalValue (calculation based on quantity * productID.productPrice: decimal
-(19,2)
-o Relationships
-§ 1 to M with Products: A product can have m
-
+# Database ERD
+![image](https://github.com/sfeng1/Database-Website/assets/114194642/40ba5f00-b2f8-4756-bfc1-4eecc23d86bd)
 
 Citations:
 https://github.com/osu-cs340-ecampus/flask-starter-app
