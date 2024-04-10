@@ -3,11 +3,11 @@
 # Summary
 
 This is a mock small business website that interacts with the backend database to track marketing campaigns, products, inventory, transactions, and customers.
-The database was a MariaDB instance provided by the university, likewise the website was hosted by the university web server. 
+The database was a MariaDB instance provided by the university, likewise, the website was hosted by the university web server. 
 
 This project is primarily designed to teach students about good database design and implementation practices. 
 
-For a full brief on the project, its functionality, and details on its implementation, please see the **summary.pdf** file included in the repo. 
+For a full brief on the project, including its functionality, implementation details, sample data, and queries, see the **summary.pdf** file included in the repo. 
 
 # Project Overview
 
