@@ -1,6 +1,6 @@
 # Database Website, CS340_Final_project
 
-# Summary
+## Summary
 
 This is a mock small business website that interacts with the backend database to track marketing campaigns, products, inventory, transactions, and customers.
 The database was a MariaDB instance provided by the university, likewise, the website was hosted by the university web server. 
@@ -9,7 +9,7 @@ This project is primarily designed to teach students about good database design 
 
 For a full brief on the project, including its functionality, implementation details, sample data, and queries, see the **summary.pdf** file included in the repo. 
 
-# Project Overview
+## Project Overview
 
 Whitney is a small business owner of The Bamboo Closet which sells Ie-dyed silk fans and other Ie-dyed
 products. Each month, she sells approximately 200 products. She also invests in social media adverIsing,
@@ -27,11 +27,11 @@ campaigns table and look for a correlaIon between the sale dates and the campaig
 informaIon on repeat customers, we have a calculaIon a-ribute in the customers table that calculates
 how many separate Imes a customer has made a purchase. 
 
-# Database ERD
+## Database ERD
 
 ![1](https://github.com/sfeng1/Database-Website/assets/114194642/cebf363b-3d92-4258-8bef-239582b4fdd7)
 
-# Citations:
+## Citations:
 https://github.com/osu-cs340-ecampus/flask-starter-app
 08/03/2023
 flask-starter-app
